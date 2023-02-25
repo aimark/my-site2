@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Сайт кардиолога</title>
+    <style>
+      h1 {
+        font-family: Roboto;
+        font-size: 40 px;
+        color: rgb(50, 50, 50);
+        text-align: center;
+        font-weight: normal;
+      }
+      #banner {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+      }
+      h2 {
+        font-family: Roboto;
+        font-size: 32 px;
+        color: rgb(100, 100, 100);
+        text-align: center;
+        font-weight: normal;
+      }
+      .bodytext {
+        font-family: Roboto;
+        color: rgb(80, 80, 80);
+      }
+      #container {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Сайт для пациентов</h1>
+      <img id="banner" src="https://my-site2.andrieimark.repl.co/static/banner.jpg" >
+      <h2>Немного о целях сайта.</h2>
+      <p class="bodytext">
+        Сайт создан для постоянного общения доктора и пациентов, решения насущных проблемм, ответов на вопросы, отслеживания состояния и показателей работы сердечно-сосудистой системы, динамики анализов. Свободный доступ для всех. Сайт создан для постоянного общения доктора и пациентов, решения насущных проблемм, ответов на вопросы, отслеживания состояния и показателей работы сердечно-сосудистой системы, динамики анализов.
+      </p>
+      <div>
+        <h3>Общие сведения о пациентах.</h3>
+        {% for patient in patients %}
+          {% include 'patient.html' %}
+        {% endfor %}
+      </div>
+    </div>
+    <div style="text-align:center;">
+      <button>Наши контакты</button>
+      <p>Copyright 2023, Mark</p>
+    </div>
+  </body>
+</html>
